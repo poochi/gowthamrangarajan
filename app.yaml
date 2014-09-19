@@ -1,0 +1,25 @@
+application: utopian-genius-615
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /uploadtable/*
+  script: admin.app
+
+- url: /SliderPageSubmit/*
+  script: slider_submit.app
+
+- url: /SliderPage/*
+  script: slider.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+
